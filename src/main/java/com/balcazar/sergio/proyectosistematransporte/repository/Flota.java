@@ -1,6 +1,7 @@
 package com.balcazar.sergio.proyectosistematransporte.repository;
 
 import com.balcazar.sergio.proyectosistematransporte.repository.models.Bus;
+import com.balcazar.sergio.proyectosistematransporte.repository.models.MedioTransporte;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
