@@ -1,11 +1,14 @@
 package com.balcazar.sergio.proyectosistematransporte.repository;
 
 import com.balcazar.sergio.proyectosistematransporte.repository.models.Bus;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+
+@Repository
 public class Flota implements IFlota{
 
     private List<Bus> flotaBuses;
