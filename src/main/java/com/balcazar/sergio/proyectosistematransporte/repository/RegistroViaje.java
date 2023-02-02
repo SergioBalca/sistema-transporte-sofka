@@ -14,7 +14,6 @@ import java.util.Map;
 @Repository
 public class RegistroViaje implements IRegistroViaje {
 
-    @Autowired
     private Viaje viaje;
     private Map<String, Viaje> viajes;
 

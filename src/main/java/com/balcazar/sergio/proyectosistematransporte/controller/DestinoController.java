@@ -20,8 +20,8 @@ public class DestinoController {
 
     @PostMapping
     public ResponseEntity registrarDestino(@RequestBody Destino destino){
-        destinoService.AgregarDestino(destino);
-        return new ResponseEntity(HttpStatus.CREATED);
+
+        return new ResponseEntity(destinoService.agregarDestino(destino), HttpStatus.CREATED);
     }
 
 }

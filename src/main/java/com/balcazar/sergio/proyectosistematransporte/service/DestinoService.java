@@ -6,16 +6,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class DestinoService implements IDestinoService{
     @Autowired
     private IDestinoRepository destinoRepository;
-
+    private Destino newDestino;
 
     @Override
-    public void AgregarDestino(Destino destino) {
+    public Destino agregarDestino(Destino destino) {
+        this.newDestino = new Destino(UUID.randomUUID().toString(), destino.getNombre());
         this.destinoRepository.addDestino(destino);
+        return this.newDestino;
     }
 
     @Override
