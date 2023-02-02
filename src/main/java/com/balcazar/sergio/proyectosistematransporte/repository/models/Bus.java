@@ -1,6 +1,6 @@
-package com.balcazar.sergio.proyectosistematransporte.repository;
+package com.balcazar.sergio.proyectosistematransporte.repository.models;
 
-public class Bus extends MedioTransporte{
+public class Bus extends MedioTransporte {
     public Bus(String id, String empresa, int cantidadPasajeros) {
         super(id,empresa,cantidadPasajeros);
     }

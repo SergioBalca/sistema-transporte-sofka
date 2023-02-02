@@ -1,14 +1,12 @@
-package com.balcazar.sergio.proyectosistematransporte.repository;
+package com.balcazar.sergio.proyectosistematransporte.repository.models;
 
-public abstract class Persona {
+public class Destino {
     private String id;
     private String nombre;
-    private String telefono;
 
-    public Persona(String id, String nombre, String telefono) {
+    public Destino(String id, String nombre) {
         this.id = id;
         this.nombre = nombre;
-        this.telefono = telefono;
     }
 
     public String getId() {
@@ -27,20 +25,11 @@ public abstract class Persona {
         this.nombre = nombre;
     }
 
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
     @Override
     public String toString() {
-        return "Persona{" +
+        return "Destino{" +
                 "id='" + id + '\'' +
                 ", nombre='" + nombre + '\'' +
-                ", telefono='" + telefono + '\'' +
                 '}';
     }
 }

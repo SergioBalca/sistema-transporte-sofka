@@ -1,4 +1,4 @@
-package com.balcazar.sergio.proyectosistematransporte.repository;
+package com.balcazar.sergio.proyectosistematransporte.repository.models;
 
 import java.util.List;
 
