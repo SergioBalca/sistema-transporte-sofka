@@ -60,16 +60,14 @@ a continuación:
     - repository: En este paquete se encuentran las interfaces y clases que implementan los métodos que permiten 
     interactuar con los datos.
     En este caso, la interacción y almacenamiento de datos se realiza mediante dos tipos de colecciones de Java; 
-    ArrayList y HashMap.
-                  las clases que se encuentran en este paquete son:
-                    - DestinoRepository: implementa los métodos addDestino(), para almacenar un nuevo destino y 
-    getDestinos() para listar los destinos disponibles.
-                    - RegistroViaje: implementa los métodos addViaje(), para agregar un nuevo viaje; getViajes() 
-    para listar los viajes registrados;
-                      getViaje() para obtener un viaje específico, y getListaPasajeros para obtener la lista de 
-    pasajeros en un viaje determinado.
-                    - Flota: implementa los métodos addBus(),para agregar un nuevo bus a la flota y getFlota() 
-    para listar los buses de la flota.
+    ArrayList y HashMap. las clases que se encuentran en este paquete son:
+        - DestinoRepository: implementa los métodos addDestino(), para almacenar un nuevo destino y 
+          getDestinos() para listar los destinos disponibles.
+        - RegistroViaje: implementa los métodos addViaje(), para agregar un nuevo viaje; getViajes() 
+          para listar los viajes registrados; getViaje() para obtener un viaje específico, 
+          y getListaPasajeros para obtener la lista de pasajeros en un viaje determinado.
+        - Flota: implementa los métodos addBus(),para agregar un nuevo bus a la flota y getFlota() 
+                 para listar los buses de la flota.
 
     - repository.models: En este paquete se encuentran los modelos del proyecto.
         - Viaje: clase que permite instanciar un nuevo viaje con los siguientes atributos:
@@ -96,22 +94,23 @@ a continuación:
         - DestinoService: implementa los métodos agregarDestino() y listarDestinos()
         - ViajeService: implementa los métodos registrarViaje(), listarViajes(), obtenerViaje() y listarPasajeros().
         - FlotaService: implementa los métodos agregarBus() y listarbuses().
-    - controller: en este paquete se encuentran las clases que permiten realizar las peticiones GET y POST a la API. 
-    Los métodos contenidos en estas clases interactuan
-                  con los métodos definidos en la capa de servicio.
+        - controller: en este paquete se encuentran las clases que permiten realizar las peticiones GET y 
+                      POST a la API. 
+    Los métodos contenidos en estas clases interactuan con los métodos definidos en la capa de servicio.
         - BusController: Contiene los siguientes métodos:
-            - obtenerBuses(): realiza un GET Request a la ruta api/v1/rest/buses para listar los buses en la flota 
-    actualmente.
+            - obtenerBuses(): realiza un GET Request a la ruta api/v1/rest/buses para listar los buses en 
+                              la flota actualmente.
             - registrarBus(): realiza un POST Request a la ruta api/v1/rest/buses para agregar un bus a la flota
         - DestinoController: contiene los siguientes métodos:
             - obtenerDestinos(): realiza un GET Request a la ruta api/v1/rest/destinos para listar los destinos a 
-    los que viajan los buses actualmente.
+                                 los que viajan los buses actualmente.
             - registrarDestino(): realiza un POST Request a la ruta api/v1/rest/destinos para agregar un destino 
     nuevo.
         - ViajeController: contiene los siguientes métodos:
             - obtenerViajes(): realiza un GET Request a la ruta api/v1/rest/viajes para listar los viajes 
     registrados en la sesión.
-            - generarViaje(): realiza un POST Request a la ruta api/v1/rest/viajes para agregar un viaje al registro.
+            - generarViaje(): realiza un POST Request a la ruta api/v1/rest/viajes para agregar un viaje 
+                              al registro.
             - obternerPasajerosViaje(): realiza un GET Request a la ruta api/v1/rest/viajes/{viajeId}/pasajeros 
     para obtener los datos de los pasajeros en el viaje.
             - obtenerViaje(): realiza un GET Request a la ruta api/v1/rest/viajes/{viajeId} para obtener el 
