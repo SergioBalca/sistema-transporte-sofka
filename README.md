@@ -93,33 +93,33 @@ definen a continuación:
     - service: en este paquete se encuentran las clases que implementan los métodos relacionados con la 
                lógica de negocio. Dichos métodos interactuan con los datos de la aplicación mediante el 
                llamado a los métodos implementados en las clases del paqute repository.
-        - DestinoService: implementa los métodos agregarDestino() y listarDestinos()
-        - ViajeService: implementa los métodos registrarViaje(), listarViajes(), obtenerViaje() y 
-                        listarPasajeros().
-        - FlotaService: implementa los métodos agregarBus() y listarbuses().
-        - controller: en este paquete se encuentran las clases que permiten realizar las peticiones 
-                      GET y POST a la API. Los métodos contenidos en estas clases interactuan con los 
-                      métodos definidos en la capa de servicio.
-        - BusController: Contiene los siguientes métodos:
-            - obtenerBuses(): realiza un GET Request a la ruta api/v1/rest/buses para listar los buses 
-                              en la flota actualmente.
-            - registrarBus(): realiza un POST Request a la ruta api/v1/rest/buses para agregar un bus a 
-                              la flota
-        - DestinoController: contiene los siguientes métodos:
-            - obtenerDestinos(): realiza un GET Request a la ruta api/v1/rest/destinos para listar los 
-                                 destinos a los que viajan los buses actualmente.
-            - registrarDestino(): realiza un POST Request a la ruta api/v1/rest/destinos para agregar 
-                                  un destino nuevo.
-        - ViajeController: contiene los siguientes métodos:
-            - obtenerViajes(): realiza un GET Request a la ruta api/v1/rest/viajes para listar los 
-                               viajes registrados en la sesión.
-            - generarViaje(): realiza un POST Request a la ruta api/v1/rest/viajes para agregar un 
-                              viaje al registro.
-            - obternerPasajerosViaje(): realiza un GET Request a la ruta 
+                - DestinoService: implementa los métodos agregarDestino() y listarDestinos()
+                - ViajeService: implementa los métodos registrarViaje(), listarViajes(), obtenerViaje() 
+                                y listarPasajeros().
+                - FlotaService: implementa los métodos agregarBus() y listarbuses().
+    - controller: en este paquete se encuentran las clases que permiten realizar las peticiones 
+                  GET y POST a la API. Los métodos contenidos en estas clases interactuan con los 
+                  métodos definidos en la capa de servicio.
+                  - BusController: Contiene los siguientes métodos:
+                    - obtenerBuses(): realiza un GET Request a la ruta api/v1/rest/buses para listar 
+                                          los buses en la flota actualmente.
+                    - registrarBus(): realiza un POST Request a la ruta api/v1/rest/buses para agregar 
+                                          un bus a la flota
+                 - DestinoController: contiene los siguientes métodos:
+                    - obtenerDestinos(): realiza un GET Request a la ruta api/v1/rest/destinos para 
+                                         listar los destinos a los que viajan los buses actualmente.
+                    - registrarDestino(): realiza un POST Request a la ruta api/v1/rest/destinos para 
+                                          agregar un destino nuevo.
+                - ViajeController: contiene los siguientes métodos:
+                    - obtenerViajes(): realiza un GET Request a la ruta api/v1/rest/viajes para listar 
+                                       los viajes registrados en la sesión.
+                    - generarViaje(): realiza un POST Request a la ruta api/v1/rest/viajes para agregar 
+                                      un viaje al registro.
+                    - obternerPasajerosViaje(): realiza un GET Request a la ruta 
                                         api/v1/rest/viajes/{viajeId}/pasajeros para obtener los datos 
                                         de los pasajeros en el viaje.
-            - obtenerViaje(): realiza un GET Request a la ruta api/v1/rest/viajes/{viajeId} para obtener 
-                              el registro de un viaje específico.
+                    - obtenerViaje(): realiza un GET Request a la ruta api/v1/rest/viajes/{viajeId} para 
+                                      obtener el registro de un viaje específico.
 
 ### Formato entrada y salida de las peticiones
 
@@ -127,6 +127,8 @@ Como se ha mencionado anteriormente, el formato JSON es el definido para realiza
 en la API. A continuación se presentan ejemplos
 de los formatos de entrada y salida para cada una de las peticiones que se pueden realizar en la 
 aplicación.
+
+
 
 
 
