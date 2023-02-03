@@ -54,7 +54,10 @@ public class Viaje {
     }
 
     public void setPasajeros(List<Pasajero> pasajeros) {
-        this.pasajeros = pasajeros;
+        if (pasajeros.size() <= this.bus.getCapacidadPasajeros())
+            this.pasajeros = pasajeros;
+        else
+            this.pasajeros = pasajeros.subList(0, this.bus.getCapacidadPasajeros());
     }
 
     @Override
