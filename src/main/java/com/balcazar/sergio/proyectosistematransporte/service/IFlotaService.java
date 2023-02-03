@@ -6,5 +6,5 @@ import java.util.Map;
 
 public interface IFlotaService {
     public Bus agregarBus(Bus bus);
-    public Map<String, Bus> ListarBuses();
+    public Map<String, Bus> listarBuses();
 }

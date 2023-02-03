@@ -22,7 +22,7 @@ public class DestinoService implements IDestinoService{
     }
 
     @Override
-    public List<Destino> ListarDestinos() {
+    public List<Destino> listarDestinos() {
         return destinoRepository.getDestinos();
     }
 }

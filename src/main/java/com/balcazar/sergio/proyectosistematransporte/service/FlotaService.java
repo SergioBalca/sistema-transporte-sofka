@@ -20,7 +20,7 @@ public class FlotaService implements IFlotaService{
     }
 
     @Override
-    public Map<String, Bus> ListarBuses() {
+    public Map<String, Bus> listarBuses() {
         return flota.getFlota();
     }
 }

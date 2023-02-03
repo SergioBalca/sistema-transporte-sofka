@@ -16,7 +16,7 @@ public class DestinoController {
     // GET Request para obtener los Destinos disponibles
     @GetMapping()
     public ResponseEntity obtenerDestinos(){
-        return new ResponseEntity(destinoService.ListarDestinos(), HttpStatus.FOUND);
+        return new ResponseEntity(destinoService.listarDestinos(), HttpStatus.FOUND);
     }
 
     // POST Request para registrar un nuevo Destino

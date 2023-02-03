@@ -16,7 +16,7 @@ public class BusController {
     // GET Request para obtener los Buses de la flota
     @GetMapping()
     public ResponseEntity obtenerBuses(){
-        return new ResponseEntity(flotaService.ListarBuses(), HttpStatus.FOUND);
+        return new ResponseEntity(flotaService.listarBuses(), HttpStatus.FOUND);
     }
 
     // POST Request para registrar Bus nuevo
