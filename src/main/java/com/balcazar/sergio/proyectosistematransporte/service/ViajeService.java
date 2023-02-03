@@ -27,11 +27,12 @@ public class ViajeService implements IViajeService{
                 viaje.getBus(),
                 viaje.getDestino(),
                 viaje.getPasajeros());
+        registroViaje.addViaje(newViaje);
         return newViaje;
     }
 
     @Override
     public Map<String, Viaje> ListarViajes() {
-        return null;
+        return registroViaje.getViajes();
     }
 }
