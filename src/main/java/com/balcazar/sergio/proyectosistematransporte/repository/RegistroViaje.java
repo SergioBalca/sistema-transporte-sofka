@@ -1,6 +1,7 @@
 package com.balcazar.sergio.proyectosistematransporte.repository;
 
 import com.balcazar.sergio.proyectosistematransporte.repository.IRegistroViaje;
+import com.balcazar.sergio.proyectosistematransporte.repository.models.Bus;
 import com.balcazar.sergio.proyectosistematransporte.repository.models.Pasajero;
 import com.balcazar.sergio.proyectosistematransporte.repository.models.Viaje;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,5 @@ public class RegistroViaje implements IRegistroViaje {
 
         return pasajerosViaje;
     }
-
 
 }

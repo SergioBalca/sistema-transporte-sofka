@@ -1,5 +1,6 @@
 package com.balcazar.sergio.proyectosistematransporte.repository;
 
+import com.balcazar.sergio.proyectosistematransporte.repository.models.Bus;
 import com.balcazar.sergio.proyectosistematransporte.repository.models.Pasajero;
 import com.balcazar.sergio.proyectosistematransporte.repository.models.Viaje;
 

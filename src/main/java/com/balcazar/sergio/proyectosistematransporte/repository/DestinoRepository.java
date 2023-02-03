@@ -17,9 +17,9 @@ public class DestinoRepository implements IDestinoRepository {
     public DestinoRepository() {
         this.destinos = new ArrayList<>(List.of
                 (
-                    new Destino(UUID.randomUUID().toString(), "Rionegro"),
-                    new Destino(UUID.randomUUID().toString(), "Sopetran"),
-                    new Destino(UUID.randomUUID().toString(), "Barbosa")
+                    new Destino("300", "Rionegro"),
+                    new Destino("400", "Sopetran"),
+                    new Destino("500", "Barbosa")
                 ));
     }
 

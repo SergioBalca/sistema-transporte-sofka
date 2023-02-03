@@ -16,7 +16,7 @@ public class DestinoService implements IDestinoService{
 
     @Override
     public Destino agregarDestino(Destino destino) {
-        this.newDestino = new Destino(UUID.randomUUID().toString(), destino.getNombre());
+        this.newDestino = new Destino(destino.getId(), destino.getNombre());
         this.destinoRepository.addDestino(destino);
         return this.newDestino;
     }
