@@ -33,6 +33,12 @@ public class RegistroViaje implements IRegistroViaje {
     }
 
     @Override
+    public Viaje getViaje(String id) {
+        this.viaje = this.viajes.get(id);
+        return viaje;
+    }
+
+    @Override
     public List<Pasajero> getListaPasajeros(String idViaje) {
         this.viaje = this.viajes.get(idViaje);
         List<Pasajero>  pasajerosViaje = this.viaje.getPasajeros();

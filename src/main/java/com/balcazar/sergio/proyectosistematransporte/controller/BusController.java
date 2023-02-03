@@ -13,11 +13,13 @@ public class BusController {
     @Autowired
     private IFlotaService flotaService;
 
+    // GET Request para obtener los Buses de la flota
     @GetMapping()
     public ResponseEntity obtenerBuses(){
         return new ResponseEntity(flotaService.ListarBuses(), HttpStatus.FOUND);
     }
 
+    // POST Request para registrar Bus nuevo
     @PostMapping
     public ResponseEntity registrarBus(@RequestBody Bus bus){
         return new ResponseEntity(flotaService.agregarBus(bus), HttpStatus.CREATED);

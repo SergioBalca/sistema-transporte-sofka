@@ -13,11 +13,13 @@ public class DestinoController {
     @Autowired
     private IDestinoService destinoService;
 
+    // GET Request para obtener los Destinos disponibles
     @GetMapping()
     public ResponseEntity obtenerDestinos(){
         return new ResponseEntity(destinoService.ListarDestinos(), HttpStatus.FOUND);
     }
 
+    // POST Request para registrar un nuevo Destino
     @PostMapping
     public ResponseEntity registrarDestino(@RequestBody Destino destino){
 

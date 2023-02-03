@@ -2,11 +2,13 @@ package com.balcazar.sergio.proyectosistematransporte.service;
 
 import com.balcazar.sergio.proyectosistematransporte.repository.IFlota;
 import com.balcazar.sergio.proyectosistematransporte.repository.IRegistroViaje;
+import com.balcazar.sergio.proyectosistematransporte.repository.models.Pasajero;
 import com.balcazar.sergio.proyectosistematransporte.repository.models.Viaje;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -32,7 +34,17 @@ public class ViajeService implements IViajeService{
     }
 
     @Override
-    public Map<String, Viaje> ListarViajes() {
+    public Map<String, Viaje> listarViajes() {
         return registroViaje.getViajes();
+    }
+
+    @Override
+    public Viaje obtenerViaje(String idViaje) {
+        return registroViaje.getViaje(idViaje);
+    }
+
+    @Override
+    public List<Pasajero> listarPasajeros(String idViaje) {
+        return registroViaje.getListaPasajeros(idViaje);
     }
 }
