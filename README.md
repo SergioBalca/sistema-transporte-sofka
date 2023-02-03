@@ -128,8 +128,121 @@ en la API. A continuación se presentan ejemplos
 de los formatos de entrada y salida para cada una de las peticiones que se pueden realizar en la 
 aplicación.
 
+#### Ejemplo GET Request obtenerBuses(). La ruta es api/v1/rest/buses:
 
+`  {
+"BBB321": {
+"id": "BBB321",
+"empresa": "Sotra Uraba",
+"capacidadPasajeros": 20
+},
+"CCC432": {
+"id": "CCC432",
+"empresa": "TCP Barbosa",
+"capacidadPasajeros": 15
+},
+"AAA123": {
+"id": "AAA123",
+"empresa": "Sotra Retiro",
+"capacidadPasajeros": 15
+}
+}
+`
+#### Ejemplo POST Request registrarBus(). La ruta es api/v1/rest/buses.
 
+`{
+"id": "SAB789",
+"empresa": "YameYa",
+"capacidadPasajeros": 10
+}
+`
 
+#### Ejemplo GET Request obtenerDestinos(). La ruta es api/v1/rest/destinos
 
+`
+[
+{
+"id": "300",
+"nombre": "Rionegro"
+},
+{
+"id": "400",
+"nombre": "Sopetran"
+},
+{
+"id": "500",
+"nombre": "Barbosa"
+},
+{
+"id": "600",
+"nombre": "Girardota"
+}
+]
+`
+
+#### Ejemplo POST REQUEST registrarDestino(). La ruta es api/v1/rest/destinos
+
+`   {
+"id": "600",
+"nombre": "Girardota"
+}
+`
+
+#### Ejemplo GET REQUEST obtenerViajes(). La ruta es api/v1/rest/viajes.
+
+`   {
+"7285912e-f308-412d-8117-1db141cfba57": {
+"id": "7285912e-f308-412d-8117-1db141cfba57",
+"horaSalida": "Fri Feb 03 15:56:41 COT 2023",
+"bus": {
+"id": "AAA123",
+"empresa": "Sotra Retiro",
+"capacidadPasajeros": 0
+},
+"destino": {
+"id": "300",
+"nombre": "Rionegro"
+},
+"pasajeros": [
+{
+"id": "1234567890",
+"nombre": "Sergio",
+"telefono": "3004567890"
+},
+{
+"id": "7894561230",
+"nombre": "Andrés",
+"telefono": "3002583691"
+}
+]
+}
+}
+`
+
+#### Ejemplo POST Request generarViaje(). La ruta es La ruta es api/v1/rest/viajes.
+
+`   {
+"bus": {
+"id": "AAA123",
+"empresa": "Sotra Retiro",
+"Capacidad Pasajeros": 15
+},
+"destino": {
+"id": "300",
+"nombre": "Rionegro"
+},
+"pasajeros": [
+{
+"id": "1234567890",
+"nombre": "Sergio",
+"telefono": "3004567890"
+},
+{
+"id": "7894561230",
+"nombre": "Andrés",
+"telefono": "3002583691"
+}
+]
+}
+`
 
