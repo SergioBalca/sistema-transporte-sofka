@@ -17,12 +17,12 @@ public class DestinoService implements IDestinoService{
     @Override
     public Destino agregarDestino(Destino destino) {
         this.newDestino = new Destino(destino.getId(), destino.getNombre());
-        this.destinoRepository.addDestino(destino);
+        destinoRepository.addDestino(destino);
         return this.newDestino;
     }
 
     @Override
     public List<Destino> ListarDestinos() {
-        return this.destinoRepository.getDestinos();
+        return destinoRepository.getDestinos();
     }
 }
